@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIControls.PictureInPicture">
+    <Grid  HorizontalOptions="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border HeightRequest="60" 
+                WidthRequest="60"
+                StrokeShape="RoundRectangle 60,60,60,60"
+                HorizontalOptions="Center"                    
+                StrokeThickness="4"
+                Margin="0,0,0,0">
+            <Image
+            x:Name="imgBig"
+            Aspect="AspectFit"
+            SemanticProperties.Description=""
+            HeightRequest="60"
+            WidthRequest="60"
+            BackgroundColor="#3494A1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" Source="sova.png">
+            </Image>
+
+        </Border>
+
+        <Grid  VerticalOptions="End" HorizontalOptions="End" >
+            <Border HeightRequest="25" 
+            WidthRequest="25"
+            StrokeShape="RoundRectangle 60,60,60,60"
+            HorizontalOptions="Center"
+            StrokeThickness="2"                    
+            Margin="0,0,0,0"
+            AnchorX="50">
+                <Image 
+            x:Name="imgSmall"
+            Aspect="AspectFit"
+            SemanticProperties.Description=""
+            HeightRequest="25"
+            WidthRequest="25"
+            BackgroundColor="#3494A1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+            </Border>
+        </Grid>
+    </Grid>
+</ContentView>
